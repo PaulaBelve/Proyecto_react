@@ -1,0 +1,56 @@
+.estilosNav {
+
+    display: flex;
+    
+    justify-content: flex-start;
+   
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    list-style: none;
+   margin-top: 1rem; 
+    
+}
+
+.estilosMenu {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: 2rem;
+  
+  
+}
+
+a { text-decoration: none;
+    list-style: none;
+    color: cornflowerblue;
+
+
+}
+
+ .logo {
+
+  width: 100px;
+  
+  }
+
+
+
+.estilosCardWidget {
+
+  margin-left: 580px;
+  margin-top: 2rem;
+}
+
+.carrito {
+
+  width: 25px;
+  height: 25px;
+  
+
+
+}
+
