@@ -1,6 +1,7 @@
 import './Navbar.css'
 import Logo from '../Logo/Logo'
 import CardWidget from '../CardWidget/CardWidget'
+import { Link } from 'react-router-dom'
 
 
 
@@ -14,10 +15,11 @@ const navBar = () => {
             <div className="estilosLogo">
             <Logo/>
             </div>
-            
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Tienda</a></li>
-            <li><a href="">Contacto</a></li>
+            <div >
+            <Link className="botonesNav" to='/category/Muffins'>Muffins</Link>
+            <Link className="botonesNav" to='/category/budines'>Budines</Link>
+           <Link className="botonesNav" to='/category/tortas'> Tortas</Link>
+           </div>
             
             </div>
 

@@ -1,0 +1,19 @@
+
+
+.numero {
+    margin-top: 2rem;
+    font-size: 1.8em ;
+    color: grey;
+}
+
+.btnContador {
+
+    font-size: 1.5em;
+
+    border-radius: 5px;
+    border-style: none;
+    width: 5rem;
+    cursor: pointer;
+    color: rgb(65, 63, 63);
+
+}
