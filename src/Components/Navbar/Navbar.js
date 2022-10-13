@@ -13,7 +13,9 @@ const navBar = () => {
 
             <div className="estilosMenu">
             <div className="estilosLogo">
+            <Link to='/'>
             <Logo/>
+            </Link>
             </div>
             <div >
             <Link className="botonesNav" to='/category/Muffins'>Muffins</Link>

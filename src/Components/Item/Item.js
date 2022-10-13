@@ -1,5 +1,7 @@
 import './Item.css'
 
+
+
 import {Link} from 'react-router-dom'
 
 const Item = ({prod}) => {
@@ -10,6 +12,10 @@ const Item = ({prod}) => {
     
         <div className="divBudines">
 
+          <picture>
+         <img src={prod.imagen} alt='' />
+          </picture>
+
           <div className="infoBudines"> 
         <h1 className='tituloBudines'>{prod.budin}</h1>
         <h2 className='subtituloBudines'>{prod.sabor}</h2>
@@ -19,9 +25,6 @@ const Item = ({prod}) => {
          </div>
          </section>
     )
-
-
-
 }
 
 export default Item

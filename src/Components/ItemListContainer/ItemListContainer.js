@@ -5,7 +5,7 @@ import { useParams} from "react-router-dom"
 
 
 
-
+//FALTA AGREGAR EL GETPRODUCTO BY CATEGORY - MIRAR CLASE DE RUTEO
 
 const ItemListContainer = ({saludo}) => {
 
@@ -33,14 +33,14 @@ console.log(productos)
 
 if(loading) {
 
-    return <h1>Loading...</h1>
+    return <h1>Cargando...</h1>
 }
 
     return (
         
         <div>
     
-    <h1>{saludo}</h1>
+    <h1>{`${saludo} ${categoryId ||''}`} </h1>
 
     <ItemList productos={productos}/>
 
