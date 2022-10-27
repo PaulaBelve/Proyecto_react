@@ -2,9 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Poppins:ital,wght@1,300;1,400&display=swap');
 
+
+
+.contenedorDetalle {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgDetalle {
+
+    width: 70%;
+   /* margin-top: 5rem; */
+}
+
+.infoDetalle {
+
+    margin-right: 5% ;
+}
+
+
+
 .tituloDetalle {
 
-    font-size: 2em;
+    margin-top: 2rem;
+    font-size: 3.5em;
     color: cornflowerblue;
     font-family: poppins;
 }
@@ -57,6 +81,20 @@ font-family: poppins;
     margin-top: 2rem;
     color: rgb(65, 63, 63);
     background-color: cornflowerblue;
+    font-family: poppins;
+    font-size: 1.2rem;
+    border-radius: 1%;
+    border: solid 1px cornflowerblue ;
+    margin: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.btnFinalizar {
+
+    margin-top: 2rem;
+    color: rgb(65, 63, 63);
+    background-color: palevioletred;
     font-family: poppins;
     font-size: 1.2rem;
     border-radius: 1%;

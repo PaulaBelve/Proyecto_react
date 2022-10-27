@@ -1,55 +1,80 @@
 import { useState, useEffect } from "react"
-import { getProducts} from '../../asyncMock'
 import ItemList from '../ItemList/ItemList'
-import { useParams} from "react-router-dom"
+import { useParams } from "react-router-dom"
+//import { getProducts} from '../../asyncMock'
+import { getDocs, collection, query, where } from 'firebase/firestore'
+import { db } from '../../services/firebase'
+
 
 
 
 //FALTA AGREGAR EL GETPRODUCTO BY CATEGORY - MIRAR CLASE DE RUTEO
 
-const ItemListContainer = ({saludo}) => {
+const ItemListContainer = ({ saludo }) => {
 
     const [productos, setProducts] = useState([])
-    const [loading, setLoading] = useState (true)
+    const [loading, setLoading] = useState(true)
 
-    const {categoryId} = useParams ()
+    const { categoryId } = useParams()
 
     useEffect(() => {
-        
+
         setLoading(true)
-        
-        getProducts(categoryId).then(productos => {
+
+        const collectionRef = categoryId
+
+            ? query(collection(db, 'productos'), where ('Category', '==', categoryId))
+       : collection(db, 'productos')
+
+
+getDocs(collectionRef).then(response => {
+    console.log(response)
+
+
+    const ProductosAdaptados = response.docs.map(doc => {
+
+        const data = doc.data()
+
+        return { id: doc.id, ...data }
+
+    })
+
+    setProducts(ProductosAdaptados)
+}).finally(() => {
+    setLoading(false)
+
+})
+
+/*  getProducts(categoryId).then(productos => {
 
         setProducts(productos)
 
         }).finally(() => {
 
             setLoading(false)
-        })
+        }) */
 
 }, [categoryId])
 
 console.log(productos)
 
-if(loading) {
+if (loading) {
 
     return <h1>Cargando...</h1>
 }
 
-    return (
-        
-        <div>
-    
-    <h1>{`${saludo} ${categoryId ||''}`} </h1>
+return (
 
-    <ItemList productos={productos}/>
+    <div>
 
-  
+        <h1>{`${saludo} ${categoryId || ''}`} </h1>
+
+        <ItemList productos={productos} />
+
+
     </div>
-   
-  )
+
+)
 }
-
-
 
 export default ItemListContainer

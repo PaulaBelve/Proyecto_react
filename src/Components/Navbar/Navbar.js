@@ -18,9 +18,10 @@ const navBar = () => {
             </Link>
             </div>
             <div >
-            <Link className="botonesNav" to='/category/Muffins'>Muffins</Link>
-            <Link className="botonesNav" to='/category/budines'>Budines</Link>
-           <Link className="botonesNav" to='/category/tortas'> Tortas</Link>
+                <Link className='botonesNav' to='/'>Inicio</Link>
+            <Link className="botonesNav" to='/category/vegano'>Budines veganos</Link>
+            <Link className="botonesNav" to='/category/sin tacc'>Tienda</Link>
+           <Link className="botonesNav" to='/category/sin tacc'> Budines sin tacc</Link>
            </div>
             
             </div>

@@ -1,5 +1,6 @@
 
 import './App.css';
+import Inicio from './Components/Inicio/Inicio';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import Navbar from './Components/Navbar/Navbar'
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer'
@@ -9,21 +10,20 @@ import { CartContextProvider } from '../src/Context/CartContext'
 function App() {
   return (
     <div className="App">
-  <CartContextProvider>
-      <BrowserRouter>
-       
+      <CartContextProvider>
+        <BrowserRouter>
+
 
           <Navbar />
 
-        
-        <Routes>
-          <Route path='/' element={<ItemListContainer saludo={'BUDINES'} />} />
-          <Route path='/category/:categoryId' element={<ItemListContainer saludo={'Producto:'}/>} />
-          <Route path='/detalle/:ProductoId' element={<ItemDetailContainer />} />
-          <Route path='*' element={<h1>404 NOT FOUND</h1>} /> 
+          <Routes>
+            <Route path='/' element={<Inicio/>} />
+            <Route path='/category/:categoryId' element={<ItemListContainer saludo={'Productos:'} />} />
+            <Route path='/detalle/:ProductoId' element={<ItemDetailContainer />} />
+            <Route path='*' element={<h1>404 NOT FOUND</h1>} />
 
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
       </CartContextProvider>
 
     </div>
@@ -32,3 +32,5 @@ function App() {
 
 
 export default App;
+
+//{<ItemListContainer saludo={'BUDINES'} />} 

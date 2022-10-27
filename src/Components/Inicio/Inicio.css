@@ -1,0 +1,49 @@
+
+
+   .proposito {
+
+        color: grey;
+
+        text-align: center;
+
+        font-size: 3rem;
+
+        margin-top: 5%;
+
+    
+    }
+
+    #parrafoProp {
+
+        font-size: 2rem;
+
+        opacity: 0.6 ;
+
+        box-shadow: 0 0 10px cornflowerblue;
+
+        background-color: cornflowerblue ;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 5%;
+
+        margin-top: 5%;
+
+    }
+
+    .parrafo2 {
+       
+        font-size: 1.5rem;
+        align-items: center;
+        text-align: center;
+        margin: 1% 2% 2% 2%;
+        color: grey;
+        padding: 1%;
+    }
+
+    .enlaceTienda {
+
+        text-decoration: none;
+    }
