@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
+import Formulario from '../Formulario/Formulario'
 
 import { getDocs, addDoc, collection, where, query, documentId, writeBatch } from "firebase/firestore";
 import { db } from "../../services/firebase";
@@ -10,23 +11,16 @@ const Checkout = () => {
 
     const { cart, total, clearCart } = useContext(CartContext)
 
-    const crearOrden = async () => {
+    const crearOrden = async (Usuario) => {
 
         setLoading(true)
 
         try {
             const objOrder = {
 
-                Usuario: {
-
-                    name: "Paula",
-                    apellido: "Belvedere",
-                    número: "dkfnhrjvk",
-                    email: "pau.belve@gmail.com"
-                },
-
-                Items: cart,
-                total
+                   Usuario,
+                   Items: cart,
+                   total
             }
 
             console.log(objOrder)
@@ -83,13 +77,14 @@ const Checkout = () => {
     }
 
     if (loading) {
-        return <h1>Su orden esta siendo procesada...</h1>
+        return <h1 className="loadingCheck">Su orden esta siendo procesada...</h1>
     }
 
     return (
         <>
-            <h1> Formulario de confirmación </h1>
-            <button onClick={crearOrden}>Confirmar</button>
+            <h1 className="tituloCheck"> Formulario de confirmación </h1>
+            <Formulario order={crearOrden}></Formulario>
+            
 
         </>
 
