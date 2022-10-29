@@ -5,9 +5,6 @@ import { useParams } from "react-router-dom"
 import { getDocs, collection, query, where } from 'firebase/firestore'
 import { db } from '../../services/firebase'
 
-
-
-
 //FALTA AGREGAR EL GETPRODUCTO BY CATEGORY - MIRAR CLASE DE RUTEO
 
 const ItemListContainer = ({ saludo }) => {
@@ -44,15 +41,6 @@ getDocs(collectionRef).then(response => {
     setLoading(false)
 
 })
-
-/*  getProducts(categoryId).then(productos => {
-
-        setProducts(productos)
-
-        }).finally(() => {
-
-            setLoading(false)
-        }) */
 
 }, [categoryId])
 

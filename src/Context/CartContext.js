@@ -5,8 +5,8 @@ export const CartContext = createContext()
 
 export const CartContextProvider = ({ children }) => {
     const [cart, setCart] = useState([])
-   // const [totalQuantity, setTotalQuantity] = useState(0)
-    console.log(cart)
+    const [totalQuantity, setTotalQuantity] = useState(0)
+    const [total, setTotal] = useState (0)
 
     // Función para que no se agregue dos veces el mismo productos e interfiera en el ID
 
@@ -29,12 +29,17 @@ export const CartContextProvider = ({ children }) => {
         setCart(cartWithoutItem)
       }
 
-   /*   useEffect(() => {
+       useEffect(() => {
        const totalQuantity = getTotalQuantity()
         setTotalQuantity(totalQuantity)
-      }, [cart]) */
+      }, [cart]) 
 
       // Función para que el total de la compra se refleje en el CardWidget
+
+    useEffect(() => {
+        const total = getTotal()
+        setTotal(total)
+      }, [cart]) 
 
       const getTotalQuantity = () => {
         let totalQuantity = 0
@@ -45,10 +50,35 @@ export const CartContextProvider = ({ children }) => {
 
         return totalQuantity
     }
+
+  const getProductQuantity = (id) => {
+
+      const product = cart.find( prod => prod.id === id)
+
+      return product?.quantity
+    } 
+
+    const getTotal = () => {
+
+      let accu = 0
+
+      cart.forEach (prod => {
+
+        accu += prod.quantity * prod.Precio
+      })
+
+      return accu
+    }
+
+    const clearCart = () => {
+
+      setCart([])
+    } 
     
 
     return (
-        <CartContext.Provider value={{ cart, addItem, removeItem, getTotalQuantity }}>
+        <CartContext.Provider value={{ cart, addItem, removeItem, getProductQuantity, getTotalQuantity,
+        totalQuantity, total, clearCart}}>
             {children}
         </CartContext.Provider>
     )
