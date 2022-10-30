@@ -1,4 +1,35 @@
-# Getting Started with Create React App
+ 
+# DELFOS - Ecommerce
+
+```sh
+Pequeño emprendimiento de budines saludables, sin tacc y veganos
+```
+
+# INICIAR EL REPOSITORIO
+
+- $ Clonar el repositorio https://github.com/PaulaBelve/Proyecto_react.git
+- $ cd delfos
+- $ npm install
+- $ npm start
+
+# ECOMMERCE CONSTRUIDO CON :
+
+Create React App
+Firebase
+Formik
+Sweet.Alert
+Boostrap
+Vercel
+
+# Hosting
+
+
+
+
+
+
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +98,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
