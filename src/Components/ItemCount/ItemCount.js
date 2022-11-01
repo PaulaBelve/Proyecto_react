@@ -2,7 +2,7 @@ import './ItemCount.css'
 import {useState} from 'react'
 
 
-const ItemCount = ({stock = 0, inicio = 1, onAdd }) => {
+const ItemCount = ({stock = 0, inicio = 0, onAdd }) => {
 const [quantity, setQuantity] = useState(inicio)
 
 const restar = () => {

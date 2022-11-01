@@ -1,31 +1,32 @@
 import './Notification.css'
-import { createContext, useState  } from "react"
+import { createContext, useState } from "react"
 
-const Notification = ({msg, severity}) => {
+const Notification = ({ msg, severity }) => {
 
     const notificationStyle = {
 
-        position:"absolute",
+        position: "absolute",
         top: 100,
         right: 20,
         padding: '10px 20px 10px 20px',
-        
-        color: "white"}
 
-        if(msg === '') return
+        color: "white"
+    }
 
-        return ( 
+    if (msg === '') return
 
-            <div className={severity === 'success' ? 'correctClass'  : 'errorClass'} style={notificationStyle}>
-                {msg}
-            </div>
+    return (
 
-)
+        <div className={severity === 'success' ? 'correctClass' : 'errorClass'} style={notificationStyle}>
+            {msg}
+        </div>
+
+    )
 }
 
 export const NotificationContext = createContext()
 
-export const NotificationProvider = ({children}) => {
+export const NotificationProvider = ({ children }) => {
 
     const [message, setMessage] = useState('')
     const [severity, setSeverity] = useState('success')
@@ -38,14 +39,14 @@ export const NotificationProvider = ({children}) => {
         setTimeout(() => {
             setMessage('')
         }, 2000)
-    
-}
+
+    }
 
     return (
-        <NotificationContext.Provider value={{setNotification}}>
-            <Notification msg={message} severity={severity}/>
+        <NotificationContext.Provider value={{ setNotification }}>
+            <Notification msg={message} severity={severity} />
 
-       {children}
+            {children}
 
         </NotificationContext.Provider>
     )

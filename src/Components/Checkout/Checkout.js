@@ -1,7 +1,6 @@
 import { useState, useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
 import Formulario from '../Formulario/Formulario'
-
 import { getDocs, addDoc, collection, where, query, documentId, writeBatch } from "firebase/firestore";
 import { db } from "../../services/firebase";
 import { NotificationContext } from '../../Notification/Notification'
@@ -60,11 +59,11 @@ const Checkout = () => {
 
                 const orderRef = collection(db, 'order')
                 const orderAdded = await addDoc(orderRef, objOrder)
-
+                setNotification('success', `Su orden ha sido procesada, muchas gracias por elegirnos!`)
                 console.log(`el id de su orden es: ${orderAdded.id}`)
                 clearCart()
             } else {
-                setNotification('error', 'producto temporalmente sin stock')
+                setNotification('error', `el producto esta temporalmente sin stock`)
                 console.log('hay productos fuera de stock')
 
             }

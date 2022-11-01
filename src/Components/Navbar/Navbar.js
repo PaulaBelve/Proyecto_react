@@ -12,24 +12,27 @@ const navBar = () => {
         <nav className="estilosNav">
 
             <div className="estilosMenu">
-            <div className="estilosLogo">
-            <Link to='/'>
-            <Logo/>
-            </Link>
+                <div className="estilosLogo">
+                    <Link to='/'>
+                        <Logo />
+                    </Link>
+                </div>
+                <div >
+                    <Link className='botonesNav' to='/'>Inicio</Link>
+                    <Link className="botonesNav" to='/category/vegano'>Budines veganos</Link>
+                    <Link className="botonesNav" to='/category/sin tacc'> Budines sin tacc</Link>
+                </div>
+
             </div>
-            <div >
-                <Link className='botonesNav' to='/'>Inicio</Link>
-            <Link className="botonesNav" to='/category/vegano'>Budines veganos</Link>
-            <Link className="botonesNav" to='/category/sin tacc'> Budines sin tacc</Link>
-           </div>
-            
-            </div>
+
 
             <div className="estilosCardWidget">
-             <CardWidget  /> </div>
+                <CardWidget /> </div>
 
-          </nav>
- )
+        </nav>
+
+
+    )
 }
 
 export default navBar

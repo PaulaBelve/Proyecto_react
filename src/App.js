@@ -13,24 +13,24 @@ import { NotificationProvider } from './Notification/Notification';
 function App() {
   return (
     <div className="App">
-       <NotificationProvider>
-      <CartContextProvider>
-        <BrowserRouter>
+      <NotificationProvider>
+        <CartContextProvider>
+          <BrowserRouter>
 
 
-          <Navbar />
+            <Navbar />
 
-          <Routes>
-            <Route path='/' element={<Inicio/>} />
-            <Route path='/category/:categoryId' element={<ItemListContainer saludo={'Productos:'} />} />
-            <Route path='/detalle/:ProductoId' element={<ItemDetailContainer />} />
-            <Route path='/cart' element={<Cart/>} />
-            <Route path='/checkout' element={<Checkout/>} />
-            <Route path='*' element={<h1>404 NOT FOUND</h1>} />
+            <Routes>
+              <Route path='/' element={<Inicio />} />
+              <Route path='/category/:categoryId' element={<ItemListContainer saludo={'Productos:'} />} />
+              <Route path='/detalle/:ProductoId' element={<ItemDetailContainer />} />
+              <Route path='/cart' element={<Cart />} />
+              <Route path='/checkout' element={<Checkout />} />
+              <Route path='*' element={<h1>404 NOT FOUND</h1>} />
 
-          </Routes>
-        </BrowserRouter>
-      </CartContextProvider>
+            </Routes>
+          </BrowserRouter>
+        </CartContextProvider>
       </NotificationProvider>
 
     </div>
@@ -40,4 +40,4 @@ function App() {
 
 export default App;
 
-//{<ItemListContainer saludo={'BUDINES'} />} 
+

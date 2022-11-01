@@ -1,6 +1,3 @@
-// OBTENER UN VALOR Y LUEGO HACER ALGO CON ESE VALOR
-// Agrega los productos al carrito - Function onAdd
-
 import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from "../ItemCount/ItemCount"
