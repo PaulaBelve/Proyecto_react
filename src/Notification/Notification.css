@@ -1,0 +1,15 @@
+.correctClass {
+
+    background-color: purple;
+    color: white;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.errorClass {
+
+    background-color: brown;
+    color: white;
+    font-size: 2rem;
+    margin-top: 2rem;
+}

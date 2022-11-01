@@ -20,8 +20,7 @@ const navBar = () => {
             <div >
                 <Link className='botonesNav' to='/'>Inicio</Link>
             <Link className="botonesNav" to='/category/vegano'>Budines veganos</Link>
-            <Link className="botonesNav" to='/category/sin tacc'>Tienda</Link>
-           <Link className="botonesNav" to='/category/sin tacc'> Budines sin tacc</Link>
+            <Link className="botonesNav" to='/category/sin tacc'> Budines sin tacc</Link>
            </div>
             
             </div>

@@ -1,6 +1,5 @@
 import './ItemDetailContainer.css'
 import { useState, useEffect } from "react"
-//import { getProduct } from '../../asyncMock'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import { getDoc, doc } from 'firebase/firestore'
@@ -11,7 +10,6 @@ import {db} from '../../services/firebase'
 const ItemDetailContainer = ({ setCart }) => {
 
     const [producto, setProduct] = useState({})
-  //  const [loading, setLoading] = useState(true)
 
     const { ProductoId } = useParams()
 
@@ -27,23 +25,10 @@ const ItemDetailContainer = ({ setCart }) => {
 
             setProduct(productoAdaptado)
 
-})/*.catch (error => {
- console.log(error)
-}).finally(() => {
-
-setLoading(false)
-}) */
-      /*  getProduct(ProductoId).then(producto => {
-
-            setProduct(producto)
-            console.log(producto)
-        }) */
+})
 
     }, [ProductoId])
 
-  /*  if(loading) {
-        return <h1>Cargando...</h1>
-    }*/
 
     return ( 
 

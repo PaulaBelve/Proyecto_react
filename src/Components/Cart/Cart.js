@@ -11,19 +11,24 @@ const Cart = () => {
     if (totalQuantity === 0 ) {
 
         return (
-            <h2>No hay productos en el carrito</h2> )
+            <h2 className='tituloCart'>No hay productos en el carrito</h2> )
         
     }
 
     return (
 
         <section>
-            <h1>Cart</h1>
+            <h1 className='tituloCart'>Cart</h1>
             { cart.map( p => <CartItem key={p.id} {...p}/>) }
-            <p>Total: ${total}</p>
+            <p className='totalCart'>Total: ${total}</p>
+
+            <div className='btnCard'>
             <button onClick={() => clearCart ()} className='btnEliminarCarrito'>Limpiar carrito</button> 
          
-            <Link to='/checkout' className='checkout'>Checkout</Link>
+            <Link to='/checkout' className='checkout'>Aceptar</Link>
+
+            </div>
+           
 
 
 

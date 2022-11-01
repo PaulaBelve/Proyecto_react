@@ -1,28 +1,24 @@
- 
-# DELFOS - Ecommerce
+## DELFOS - Ecommerce
 
 ```sh
 Pequeño emprendimiento de budines saludables, sin tacc y veganos
 ```
 
-# INICIAR EL REPOSITORIO
+## INICIAR EL REPOSITORIO
 
 - $ Clonar el repositorio https://github.com/PaulaBelve/Proyecto_react.git
-- $ cd delfos
+- $ cd Proyecto_react
 - $ npm install
 - $ npm start
 
-# ECOMMERCE CONSTRUIDO CON :
+## ECOMMERCE CONSTRUIDO CON :
 
-Create React App
-Firebase
-Formik
-Sweet.Alert
-Boostrap
-Vercel
+Create React App,
+Firebase,
+Formik,
+Vercel,
 
-# Hosting
-
+## Hosting
 
 
 

@@ -3,7 +3,6 @@ import ItemList from '../ItemList/ItemList'
 import { useParams } from "react-router-dom"
 import { getProductos } from '../../services/firebase/firestore'
 
-//FALTA AGREGAR EL GETPRODUCTO BY CATEGORY - MIRAR CLASE DE RUTEO
 
 const ItemListContainer = ({ saludo }) => {
 

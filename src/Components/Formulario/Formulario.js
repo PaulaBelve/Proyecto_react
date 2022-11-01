@@ -69,7 +69,7 @@ const Formulario = ({ order }) => {
                                                 label='email'
                                                 name='email'/>
 
-    <button type='submit' className='btnCheck'>Confirmar</button>
+    <button type='submit' className='btnCheck' disabled={!formik.isValid}>Confirmar</button>
 
                           </Form>
                         }}

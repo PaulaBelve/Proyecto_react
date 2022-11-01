@@ -1,4 +1,5 @@
-import Item from '../Item/Item'
+import './ItemList.css' ;
+import Item from '../Item/Item';
 
 
 const ItemList = ({productos}) => {
@@ -6,6 +7,7 @@ const ItemList = ({productos}) => {
     return (
 
         <div>
+          <ul className='estilosCart'>
 
         {   productos.map(prod => (
 
@@ -14,7 +16,7 @@ const ItemList = ({productos}) => {
            
              ) ) 
       }
-     
+     </ul>
         </div>
     )
 }

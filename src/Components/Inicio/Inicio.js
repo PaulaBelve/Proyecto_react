@@ -1,7 +1,7 @@
 import '../Inicio/Inicio.css'
 import '../ItemListContainer/ItemListContainer'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
-import { Link } from 'react-router-dom'
+
 
 const Inicio = () => {
 
@@ -23,7 +23,7 @@ const Inicio = () => {
 
 </div>
 
-<Link className='enlaceTienda' to='/category/budines'><ItemListContainer saludo={'NUESTROS PRODUCTOS'}/></Link>
+<section className='enlaceTienda'><ItemListContainer saludo={'NUESTROS PRODUCTOS'}/></section>
 
 </div>
 

@@ -4,12 +4,14 @@ import Formulario from '../Formulario/Formulario'
 
 import { getDocs, addDoc, collection, where, query, documentId, writeBatch } from "firebase/firestore";
 import { db } from "../../services/firebase";
+import { NotificationContext } from '../../Notification/Notification'
 
 const Checkout = () => {
 
     const [loading, setLoading] = useState(false)
 
     const { cart, total, clearCart } = useContext(CartContext)
+    const { setNotification } = useContext(NotificationContext)
 
     const crearOrden = async (Usuario) => {
 
@@ -62,11 +64,14 @@ const Checkout = () => {
                 console.log(`el id de su orden es: ${orderAdded.id}`)
                 clearCart()
             } else {
+                setNotification('error', 'producto temporalmente sin stock')
                 console.log('hay productos fuera de stock')
 
             }
 
         } catch (error) {
+
+            setNotification('error', 'Ha ocurrido un error!')
 
             console.log('error')
 
